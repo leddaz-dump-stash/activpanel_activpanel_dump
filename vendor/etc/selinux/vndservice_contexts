@@ -1,0 +1,7 @@
+*                       u:object_r:default_android_vndservice:s0
+hiavplayer                                u:object_r:hiavplayer_service:s0
+android_ir_user                           u:object_r:android_ir_user_service:s0
+virtualkeypad                             u:object_r:virtualkeypad_service:s0
+HiDisplay                                 u:object_r:hidisplay_service:s0
+hisi.dtv.service                          u:object_r:dtvserver_service:s0
+TVService                                 u:object_r:tvserver_service:s0

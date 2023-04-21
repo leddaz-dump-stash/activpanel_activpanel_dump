@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+TYPE_IR=IR-lango
+-->
+<key_xml>
+    <edison-key>
+        <key value="0xe718fe01" name="KEY_POWER"/>      <!-- -->
+        <key value="0xb946fe01" name="KEY_UP"/>      <!-- -->
+        <key value="0xe916fe01" name="KEY_DOWN"/>      <!-- -->
+        <key value="0xea15fe01" name="KEY_RIGHT"/>      <!-- -->
+        <key value="0xb847fe01" name="KEY_LEFT"/>      <!-- -->
+        <key value="0xaa55fe01" name="KEY_ENTER"/>      <!-- -->
+        <key value="0xeb14fe01" name="KEY_VOLUMEUP"/>      <!-- -->
+        <key value="0xef10fe01" name="KEY_VOLUMEDOWN"/>      <!-- -->
+        <key value="0xbf40fe01" name="KEY_MENU"/>      <!-- -->
+        <key value="0xf20dfe01" name="KEY_SOURCE"/>      <!-- -->
+        <key value="0xfb04fe01" name="KEY_BLANKSCREEN"/>      <!-- -->
+        <key value="0xed12fe01" name="KEY_FREEZE"/>      <!-- -->
+        <key value="0xf50afe01" name="KEY_BACK"/>
+        <key value="0xf10efe01" name="KEY_TOUCHSWITCH"/>
+        <key value="0xda25fe01" name="KEY_SETUP"/>
+    </edison-key>
+    <pantone-key>
+        <key value="0xf40bff02" name="KEY_POWER"/>      <!-- -->
+        <key value="0xeb14ff02" name="KEY_MUTE"/>      <!-- -->
+        <key value="0xfe01ff02" name="KEY_1"/>      <!-- -->
+        <key value="0xfd02ff02" name="KEY_2"/>      <!-- -->
+        <key value="0xfc03ff02" name="KEY_3"/>      <!-- -->
+        <key value="0xfb04ff02" name="KEY_4"/>      <!-- -->
+        <key value="0xfa05ff02" name="KEY_5"/>      <!-- -->
+        <key value="0xf906ff02" name="KEY_6"/>      <!-- -->
+        <key value="0xf807ff02" name="KEY_7"/>      <!-- -->
+        <key value="0xf708ff02" name="KEY_8"/>      <!-- -->
+        <key value="0xf609ff02" name="KEY_9"/>      <!-- -->
+        <key value="0xff00ff02" name="KEY_0"/>      <!-- -->
+        <key value="0xea15ff02" name="KEY_HOME"/>      <!-- -->
+        <key value="0xdb24ff02" name="KEY_BACK"/>      <!-- -->
+        <key value="0xda25ff02" name="KEY_ANDROID_WHITEBOARD"/>      <!-- -->
+        <!-- <key value="0xc936ff02" name=""/> -->      <!-- -->
+        <key value="0xd42bff02" name="KEY_UP"/>      <!-- -->
+        <key value="0xd32cff02" name="KEY_DOWN"/>      <!-- -->
+        <key value="0xd12eff02" name="KEY_RIGHT"/>      <!-- -->
+        <key value="0xd22dff02" name="KEY_LEFT"/>      <!-- -->
+        <key value="0xd02fff02" name="KEY_ENTER"/>      <!-- -->
+        <!-- <key value="0xf50aff02" name=""/> -->      <!-- soundonly -->
+        <key value="0xdd22ff02" name="KEY_FREEZE"/>      <!-- -->
+        <key value="0xec13ff02" name="KEY_VOLUMEUP"/>      <!-- -->
+        <key value="0xed12ff02" name="KEY_VOLUMEDOWN"/>      <!-- -->
+        <!-- <key value="0xc639ff02" name=""/> -->      <!-- light -->
+        <!-- <key value="0xc53aff02" name=""/> -->      <!-- light -->
+        <key value="0xe31cff02" name="KEY_SOURCE"/>      <!-- -->
+        <!-- <key value="0xc43bff02" name=""/> -->      <!-- task -->
+        <!-- <key value="0xc33cff02" name=""/> -->      <!-- file -->
+        <!-- <key value="0xc23dff02" name=""/> -->      <!-- Apps -->
+
+        <!-- <key value="0xce31ff02" name=""/> -->      <!-- pc -->
+        <!-- <key value="0xc13eff02" name=""/> -->      <!-- dp -->
+        <!-- <key value="0xcb34ff02" name=""/> -->      <!-- front -->
+        <!-- <key value="0xc03fff02" name=""/> -->      <!-- hdmi1 -->
+        <!-- <key value="0xbf40ff02" name=""/> -->      <!-- hdmi2 -->
+        <!-- <key value="0xcc33ff02" name=""/> -->      <!-- vga -->
+
+        <key value="0xf20dff02" name="KEY_AUTO"/>      <!-- -->
+        <!-- <key value="0xbc43ff02" name=""/> -->      <!-- browser -->
+        <!-- <key value="0xcd32ff02" name=""/> -->      <!-- d.mode -->
+        <!-- <key value="0xbb44ff02" name=""/> -->      <!-- sc.lock -->
+        <key value="0xd827ff02" name="KEY_MENU"/>      <!-- -->
+        <!-- <key value="0xba45ff02" name=""/> -->      <!-- setting -->
+    </pantone-key>
+    <common-new-key>
+        <key value="0x28d7f708" name="KEY_POWER"/>      <!-- -->
+        <key value="0x20dff708" name="KEY_MUTE"/>      <!-- -->
+        <key value="0x6a95f708" name="KEY_1"/>      <!-- -->
+        <key value="0x6699f708" name="KEY_2"/>      <!-- -->
+        <key value="0x629df708" name="KEY_3"/>      <!-- -->
+        <key value="0x29d6f708" name="KEY_4"/>      <!-- -->
+        <key value="0x25daf708" name="KEY_5"/>      <!-- -->
+        <key value="0x21def708" name="KEY_6"/>      <!-- -->
+        <key value="0x6996f708" name="KEY_7"/>      <!-- -->
+        <key value="0x659af708" name="KEY_8"/>      <!-- -->
+        <key value="0x619ef708" name="KEY_9"/>      <!-- -->
+        <key value="0x26d9f708" name="KEY_0"/>      <!-- -->
+        <key value="0x6c93f708" name="KEY_DASH"/>      <!-- -->
+        <key value="0x22ddf708" name="KEY_RETURN"/>      <!-- -->
+        <key value="0x748bf708" name="KEY_BACKLIGHT"/>      <!-- -->
+        <key value="0x708ff708" name="KEY_PC_ESC"/>      <!-- -->
+        <key value="0x6d92f708" name="KEY_UP"/>      <!-- -->
+        <key value="0x27d8f708" name="KEY_DOWN"/>      <!-- -->
+        <key value="0x609ff708" name="KEY_RIGHT"/>      <!-- -->
+        <key value="0x6897f708" name="KEY_LEFT"/>      <!-- -->
+        <key value="0x649bf708" name="KEY_ENTER"/>      <!-- -->
+        <key value="0x24dbf708" name="KEY_ANDROID_WHITEBOARD"/>      <!-- -->
+        <key value="0x23dcf708" name="KEY_BACK"/>      <!-- -->
+        <key value="0x7c83f708" name="KEY_VOLUMEUP"/>      <!-- -->
+        <key value="0x7986f708" name="KEY_VOLUMEDOWN"/>      <!-- -->
+        <key value="0x7e81f708" name="KEY_PAGEUP"/>      <!-- -->
+        <key value="0x7d82f708" name="KEY_PAGEDOWN"/>      <!-- -->
+        <key value="0x7f80f708" name="KEY_CHANNELUP"/>      <!-- -->
+        <key value="0x718ef708" name="KEY_CHANNELDOWN"/>      <!-- -->
+        <key value="0x3cc3f708" name="KEY_PC_WIN"/>      <!-- -->
+        <key value="0x2bd4f708" name="KEY_PC_SPACE"/>      <!-- -->
+        <key value="0x7887f708" name="KEY_PC_ALT_TAB"/>      <!-- -->
+        <key value="0x3fc0f708" name="KEY_PC_ALT_F4"/>      <!-- -->
+        <key value="0x2cd3f708" name="KEY_SOURCE"/>      <!-- -->
+        <key value="0x2dd2f708" name="KEY_MENU"/>      <!-- -->
+        <key value="0x2ed1f708" name="KEY_HOME"/>      <!-- -->
+        <key value="0x2fd0f708" name="KEY_AUTO"/>      <!-- -->
+        <key value="0x2ad5f708" name="KEY_RED"/>      <!-- -->
+        <key value="0x758af708" name="KEY_GREEN"/>      <!-- -->
+        <key value="0x3dc2f708" name="KEY_YELLOW"/>      <!-- -->
+        <key value="0x3ec1f708" name="KEY_ECO"/>      <!-- -->
+        <key value="0x3ac5f708" name="KEY_F1"/>      <!-- -->
+        <key value="0x3bc4f708" name="KEY_F2"/>      <!-- -->
+        <key value="0x38c7f708" name="KEY_F3"/>      <!-- -->
+        <key value="0x36c9f708" name="KEY_F4"/>      <!-- -->
+        <key value="0x34cbf708" name="KEY_F5"/>      <!-- -->
+        <key value="0x35caf708" name="KEY_F6"/>      <!-- -->
+        <key value="0x39c6f708" name="KEY_F7"/>      <!-- -->
+        <key value="0x37c8f708" name="KEY_F8"/>      <!-- -->
+        <key value="0x30cff708" name="KEY_F9"/>      <!-- -->
+        <key value="0x31cef708" name="KEY_F10"/>      <!-- -->
+        <key value="0x32cdf708" name="KEY_F11"/>      <!-- -->
+        <key value="0x33ccf708" name="KEY_F12"/>      <!-- -->
+    </common-new-key>
+    <hisi-key>
+        <key value="0x639cff00" name="KEY_POWER"      />      <!-- -->
+        <key value="0x2ed1ff00" name="KEY_MUTE"       />      <!-- -->
+        <key value="0x22ddff00" name="KEY_SOURCE"     />      <!-- -->
+        <key value="0x7986ff00" name="KEY_GUIDE"      />      <!--EPG -->
+        <key value="0x7a85ff00" name="KEY_ZOOM"       />      <!--ASPECT -->
+        <key value="0x7e81ff00" name="KEY_3D"         />      <!-- -->
+        <key value="0x7f80ff00" name="KEY_INFO"       />      <!-- -->
+        <key value="0x6d92ff00" name="KEY_1"          />      <!-- -->
+        <key value="0x6c93ff00" name="KEY_2"          />      <!-- -->
+        <key value="0x33ccff00" name="KEY_3"          />      <!-- -->
+        <key value="0x609fff00" name="KEY_4"          />      <!-- -->
+        <key value="0x718eff00" name="KEY_5"          />      <!-- -->
+        <key value="0x708fff00" name="KEY_6"          />      <!-- -->
+        <key value="0x37c8ff00" name="KEY_7"          />      <!-- -->
+        <key value="0x6b94ff00" name="KEY_8"          />      <!-- -->
+        <key value="0x758aff00" name="KEY_9"          />      <!-- -->
+        <key value="0x748bff00" name="KEY_0"          />      <!-- -->
+        <key value="0x3bc4ff00" name="KEY_SOUNDMODE"  />      <!-- -->
+        <key value="0x39c6ff00" name="KEY_PICTUREMODE"/>      <!-- -->
+        <key value="0x34cbff00" name="KEY_BACK"       />      <!-- -->
+        <key value="0x7887ff00" name="KEY_HOME"       />      <!-- -->
+        <key value="0x7788ff00" name="KEY_TVSETUP"    />      <!-- -->
+        <key value="0x6897ff00" name="KEY_MENU"       />      <!-- -->
+        <key value="0x35caff00" name="KEY_UP"         />      <!--key up-->
+        <key value="0x2dd2ff00" name="KEY_DOWN"       />      <!--key down-->
+        <key value="0x3ec1ff00" name="KEY_RIGHT"      />      <!--key right-->
+        <key value="0x6699ff00" name="KEY_LEFT"       />      <!--key left -->
+        <key value="0x31ceff00" name="KEY_ENTER"      />      <!--key ok -->
+        <key value="0x30cfff00" name="KEY_CHANNELUP"  />      <!-- -->
+        <key value="0x629dff00" name="KEY_CHANNELDOWN"/>      <!-- -->
+        <key value="0x6f90ff00" name="KEY_VOLUMEUP"   />      <!-- -->
+        <key value="0x6798ff00" name="KEY_VOLUMEDOWN" />      <!-- -->
+        <key value="0x649bff00" name="KEY_RED"        />      <!-- -->
+        <key value="0x659aff00" name="KEY_GREEN"      />      <!-- -->
+        <key value="0x3fc0ff00" name="KEY_YELLOW"     />      <!-- -->
+        <key value="0x3dc2ff00" name="KEY_BLUE"       />      <!-- -->
+        <key value="0x3cc3ff00" name="KEY_REWIND"     />      <!--快退 -->
+        <key value="0x25daff00" name="KEY_PLAYPAUSE"  />      <!-- -->
+        <key value="0x29d6ff00" name="KEY_STOP"       />      <!-- -->
+        <key value="0x2fd0ff00" name="KEY_FASTFORWARD"    />      <!--快进 -->
+        <key value="0x7b84ff00" name="KEY_PAGEUP"     />      <!--PAGEUP -->
+        <key value="0x7689ff00" name="KEY_PAGEDOWN"   />      <!--PAGEDOWN -->
+        <key value="0x26d9ff00" name="KEY_SUBTITLE"   />      <!--SUBTITLE -->
+        <key value="0x6996ff00" name="KEY_NICAM"      />      <!--NICAM MTS/HOLD -->
+        <key value="0x6a95ff00" name="KEY_TELETXT"    />      <!--TELETXT CC -->
+        <key value="0x738cff00" name="KEY_CC"         />      <!--Internet/REVEAL -->
+        <key value="0x7d82ff00" name="KEY_HDMI"       />      <!--Swap -->
+        <key value="0x38c7ff00" name="WINDOW"       />      <!--PIP/Cancel AV quicksetting-->
+        <key value="0x9a65ff00" name="KEY_RECALL"     />      <!--NULL -->
+    </hisi-key>
+</key_xml>

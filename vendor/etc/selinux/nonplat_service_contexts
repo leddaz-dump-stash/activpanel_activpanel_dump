@@ -1,0 +1,3 @@
+drm_widevine_hal_1_0                      u:object_r:drm_widevine_hal_1_0_service:s0
+multiscreen.service                       u:object_r:multiscreenserver_service:s0
+hibdserver                                u:object_r:hibdserver_service:s0

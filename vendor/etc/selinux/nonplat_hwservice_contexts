@@ -1,0 +1,10 @@
+vendor.hisilicon.hardware.hwjpeg::IHwjpeg                     u:object_r:hal_hwjpeg_hwservice:s0
+vendor.hisilicon.hardware.hwdisplay::IHwdisplay               u:object_r:hal_hwdisplay_hwservice:s0
+vendor.hisilicon.hardware.hwpq::IHwPq                         u:object_r:hal_hwpq_hwservice:s0
+vendor.hisilicon.hardware.hwsysmanager::IHwSysManager         u:object_r:hal_hwsysmanager_hwservice:s0
+vendor.hisilicon.hardware.hwdtv::IHwdtv                       u:object_r:hal_hwdtvservice_hwservice:s0
+vendor.hisilicon.hardware.hwtvmw::IHwtvmw                     u:object_r:hal_hwtvmwservice_hwservice:s0
+vendor.hisilicon.hardware.hwcursor::IHwcursor                 u:object_r:hal_hwcursor_hwservice:s0
+vendor.hisilicon.hardware.hwdlnaservice::IHwDlnaService       u:object_r:hal_hwdlnaservice_hwservice:s0
+android.hardware.neuralnetworks::IDevice                      u:object_r:hal_neuralnetworks_hwservice:s0
+vendor.hisilicon.hardware.hwaudio::IHwaudio                   u:object_r:hal_hwaudio_hwservice:s0

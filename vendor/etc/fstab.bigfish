@@ -1,0 +1,26 @@
+# Android fstab file.
+#<src>                                                  <mnt_point>         <type>    <mnt_flags and options>                              <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+
+/dev/block/bootdevice/by-name/userdata    /data  ext4   noatime,nosuid,nodev,block_validity,nodiscard,data=ordered,errors=panic,journal_checksum,barrier=1  wait,check,quota
+/dev/block/bootdevice/by-name/atv         /atv  ext4   noatime,nosuid,nodev,block_validity,nodiscard,data=ordered,errors=remount-ro,barrier=1  wait,check
+/dev/block/bootdevice/by-name/securestore /securestore  ext4   noatime,nosuid,nodev,block_validity,nodiscard,data=ordered,errors=remount-ro,barrier=1  wait,check
+/dev/block/bootdevice/by-name/cache       /cache ext4   noatime,nosuid,nodev,block_validity,nodiscard,data=ordered,errors=remount-ro,barrier=1  wait,check
+/devices/soc/f9830000.emmc/mmc_host/mmc1/*                    /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/platform/hiusb-xhci.0/*                            /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/platform/hiusb-ehci.0/*                            /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/platform/hiusb-ohci.0/*                            /mnt    vfat    defaults            voldmanaged=none:auto
+#/devices/soc.1/f9870000.xhci/*                            /mnt    vfat    defaults            voldmanaged=none:auto
+#/devices/soc.1/f9890000.ehci/*                            /mnt    vfat    defaults            voldmanaged=none:auto
+#/devices/soc.1/f9880000.ohci/*                            /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/soc/f9820000.sdcard/mmc_host/mmc1/*               /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/soc/f9870000.xhci/*                               /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/soc/f9890000.ehci/*                               /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/soc/f9880000.ohci/*                               /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/platform/soc/f9820000.sdcard/mmc_host/mmc1/*               /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/platform/soc/f9870000.xhci/*                               /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/platform/soc/f9890000.ehci/*                               /mnt    vfat    defaults            voldmanaged=none:auto
+/devices/platform/soc/f9880000.ohci/*                               /mnt    vfat    defaults            voldmanaged=none:auto
+/dev/block/zram0                                                    none    swap    defaults            zramsize=1073741824,max_comp_streams=4

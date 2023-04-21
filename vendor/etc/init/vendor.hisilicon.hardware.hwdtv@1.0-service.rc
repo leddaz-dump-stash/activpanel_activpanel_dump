@@ -1,0 +1,4 @@
+service hwdtv-1-0 /vendor/bin/hw/vendor.hisilicon.hardware.hwdtv@1.0-service
+    class hal
+    user root
+    group root

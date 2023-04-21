@@ -1,0 +1,4 @@
+service hwaudio-1-0 /vendor/bin/hw/vendor.hisilicon.hardware.hwaudio@1.0-service
+    class hal
+    user system
+    group root
