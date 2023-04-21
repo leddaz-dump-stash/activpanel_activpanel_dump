@@ -1,0 +1,27 @@
+echo "Dumping sdk_base logs ..."
+
+SDK_BASE_LOGPATH=$1/sdk_base
+mkdir -p ${SDK_BASE_LOGPATH}
+
+#proc
+busybox ls -1 /proc/msp/* | grep -v panel | busybox xargs cat >> ${SDK_BASE_LOGPATH}/msp_proc.txt
+cat /proc/vfmw/* >> ${SDK_BASE_LOGPATH}/vfmw_proc.txt
+
+#vpss
+if [ -e /proc/msp/vpss00 ]; then
+    echo saveyuv src > /proc/msp/vpss00
+    cp /mnt/vpss_*.yuv ${SDK_BASE_LOGPATH}/
+fi
+
+#viframe
+if [ -e /proc/msp/vicap0 ]; then
+    echo  saveframe 1 > /proc/msp/vicap0
+    cp /mnt/vicap_*.yuv ${SDK_BASE_LOGPATH}/
+fi
+
+#save es
+if [ -e /proc/msp/vdec00 ]; then
+    echo savestream 0 ${SDK_BASE_LOGPATH}/ > /proc/msp/vdec_ctrl
+    sleep 3
+    echo savestream 0 ${SDK_BASE_LOGPATH}/ > /proc/msp/vdec_ctrl
+fi

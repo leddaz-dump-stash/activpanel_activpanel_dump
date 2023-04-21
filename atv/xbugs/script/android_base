@@ -1,0 +1,31 @@
+echo "Dumping android_base logs ..."
+
+ANDROID_BASE_LOGPATH=$1/android_base
+mkdir -p ${ANDROID_BASE_LOGPATH}
+
+#info
+ps > ${ANDROID_BASE_LOGPATH}/ps.txt
+top -t -n 1 > ${ANDROID_BASE_LOGPATH}/top.txt
+pm -l > ${ANDROID_BASE_LOGPATH}/package_list.txt
+service list > ${ANDROID_BASE_LOGPATH}/service_list.txt
+cat /proc/meminfo > ${ANDROID_BASE_LOGPATH}/meminfo.txt
+cat /proc/media-mem > ${ANDROID_BASE_LOGPATH}/media-mem.txt
+
+#dumpsys
+dumpsys activity > ${ANDROID_BASE_LOGPATH}/dumpsys_activity.txt
+dumpsys window > ${ANDROID_BASE_LOGPATH}/dumpsys_window.txt
+dumpsys meminfo > ${ANDROID_BASE_LOGPATH}/dumpsys_meminfo.txt
+dumpsys cpuinfo > ${ANDROID_BASE_LOGPATH}/dumpsys_cpuinfo.txt
+dumpsys mount > ${ANDROID_BASE_LOGPATH}/dumpsys_mount.txt
+
+#capture
+screencap -p ${ANDROID_BASE_LOGPATH}/`date +%Y%m%d%H%M%S`.png
+echo capture > /proc/msp/hifb0
+cp /mnt/hifb_*.bmp ${ANDROID_BASE_LOGPATH}/
+
+#copy
+cp -r /data/anr ${ANDROID_BASE_LOGPATH}/
+cp -r /data/tombstones ${ANDROID_BASE_LOGPATH}/
+
+#logcat
+logcat -v threadtime -r8192 -n4 -df ${ANDROID_BASE_LOGPATH}/logcat`date +%Y%m%d%H%M%S`.txt

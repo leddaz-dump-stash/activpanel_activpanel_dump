@@ -1,0 +1,14 @@
+# Hi3751V811_DMO-user 8.0.0 OPR6.170623.013 eng.bamboo.20230302.125145 release-keys
+- manufacturer: activpanel
+- platform: bigfish
+- codename: ActivPanel
+- flavor: Hi3751V811_DMO-user
+- release: 8.0.0
+- id: OPR6.170623.013
+- incremental: eng.bamboo.20230302.125145
+- tags: release-keys
+- fingerprint: HiDPT/Hi3751V811_DMO/Hi3751V811:8.0.0/OPR6.170623.013/5.5.0.56:user/release-keys
+- is_ab: false
+- brand: ActivPanel
+- branch: Hi3751V811_DMO-user-8.0.0-OPR6.170623.013-eng.bamboo.20230302.125145-release-keys
+- repo: activpanel_activpanel_dump

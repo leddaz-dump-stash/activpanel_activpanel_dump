@@ -1,0 +1,22 @@
+# device                                                      mountpoint      fstype
+/dev/block/platform/soc/f9830000.emmc/by-name/fastboot        /fastboot       emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/bootargs        /bootargs       emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/recovery        /recovery       emmc      defaults        defaults
+#/dev/block/platform/soc/f9830000.emmc/by-name/baseparam      /baseparam      emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/panelparam      /panelparam     emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/logo            /logo           emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/bootmusic       /bootmusic      emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/bootmusicsec    /bootmusicsec   emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/tconparam       /tconparam      emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/kernel          /boot           emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/dtb             /dtb            emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/atf             /atf            emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/trustedcore     /trustedcore    emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/versioninfo     /versioninfo    emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/misc            /misc           emmc      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/system          /system         ext4      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/vendor          /vendor         ext4      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/userdata        /data           ext4      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/atv             /atv            ext4      defaults        defaults
+/dev/block/platform/soc/f9830000.emmc/by-name/cache           /cache          ext4      defaults        defaults
+/data/media/0                                                 /sdcard         sdcardfs  defaults        defaults

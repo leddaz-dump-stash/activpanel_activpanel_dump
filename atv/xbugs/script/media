@@ -1,0 +1,13 @@
+echo "Dumping media logs ..."
+
+MEDIA_LOGPATH=$1/media
+mkdir -p ${MEDIA_LOGPATH}
+
+#hiplayer
+if [ -e /proc/hisi/hiplayer00 ]; then
+    cat /proc/hisi/hiplayer00/* >> ${MEDIA_LOGPATH}/hiplayer00.txt
+fi
+
+if [ -e /proc/hisi/hiplayer01 ]; then
+    cat /proc/hisi/hiplayer01/* >> ${MEDIA_LOGPATH}/hiplayer01.txt
+fi
