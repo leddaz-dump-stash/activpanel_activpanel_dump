@@ -1,0 +1,46 @@
+#!/system/bin/sh
+if [  -f "/data/ppp/pppd.pid" ] ; then
+	echo "pppd-disconnect: pppd is being stop!"
+	PPPD_PID=`cat /data/ppp/pppd.pid`> /dev/null 2>&1
+	kill $PPPD_PID > /dev/null 2>&1
+
+fi
+if [  -f "/data/ppp/pppoe.pid" ] ; then
+	echo "pppoe-disconnect:pppoe is being stop!"
+	PPPOE_PID=`cat /data/ppp/pppoe.pid`> /dev/null 2>&1
+	kill $PPPOE_PID > /dev/null 2>&1
+fi
+
+# Kill pppd again, in case it's still hanging around
+PPPD_PID=`cat /data/ppp/pppd.pid` > /dev/null 2>&1
+kill $PPPD_PID 2&1>/dev/null
+
+
+# Kill pppoe again, in case it's still hanging around
+PPPOE_PID=`cat /data/ppp/pppoe.pid` > /dev/null 2>&1
+kill $PPPOE_PID 2&1>/dev/null
+
+sleepTime=0;
+result=0;
+PIDFILE=/data/ppp/ppptemp.pid
+
+while [ true   ] ; do
+     ps | grep ppp | busybox awk '{print $2}' > $PIDFILE
+     result=`busybox egrep -c "^[0-9]*$" $PIDFILE`
+     echo "pppd-disconnect: to check if pppd killed! result:$result,sleepTime:$sleepTime"
+     if [ $result -ge 1   ] ; then
+          if [ $sleepTime -eq 2   ] ; then
+               PPPD_PID=`cat $PIDFILE` > /dev/null 2>&1
+               kill -9 $PPPD_PID > /dev/null 2>&1
+               sleep 0.5
+               break
+          fi
+          sleep 0.5
+          sleepTime=`busybox expr $sleepTime + 1`
+      else
+          break;
+      fi
+done
+
+rm /data/ppp/pppd.pid
+rm /data/ppp/pppoe.pid

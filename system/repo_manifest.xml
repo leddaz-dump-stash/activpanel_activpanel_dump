@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="." name="aosp" review="https://android-review.googlesource.com/"/>
+  
+  <default remote="aosp" revision="master" sync-c="true" sync-j="4"/>
+  
+  <project name="platform/art.git" path="art" revision="20ace67d16e1e0e6749cf6eaf5d09da4969d88a8" upstream="master"/>
+  <project name="platform/bionic.git" path="bionic" revision="efbdf0fce14df97138258b61cd2871300b0e6b81" upstream="master"/>
+  <project name="platform/bootable.git" path="bootable" revision="bd8137ee43292bbf16ea47295ab8eda97ea1605f" upstream="master"/>
+  <project name="platform/build.git" path="build" revision="ebe6cd63fb802ee20e88accd9d234f02bd1fd5c4" upstream="master">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+    <linkfile dest="Android.bp" src="soong/root.bp"/>
+    <linkfile dest="bootstrap.bash" src="soong/bootstrap.bash"/>
+  </project>
+  <project name="platform/cts.git" path="cts" revision="cc4fcbb67ea33b090ee955c11d33d83e7ba3fb69" upstream="master"/>
+  <project name="platform/dalvik.git" path="dalvik" revision="163478f83f4c8d004020dae728485e802d0c2637" upstream="master"/>
+  <project name="platform/developers.git" path="developers" revision="817d3ec08d65dcd049443c1c7f171319b2caef4d" upstream="master"/>
+  <project name="platform/development.git" path="development" revision="ee1ae4e011f54382ececab7b272fba1dc3c0669f" upstream="master"/>
+  <project name="platform/device.git" path="device" revision="fddaf69e08405513eec403996385e4e93f800527" upstream="master"/>
+  <project name="platform/docs.git" path="docs" revision="e8cbed5ce758e891f2efb084d9b0ccb2c8eea9f3" upstream="master"/>
+  <project name="platform/external.git" path="external" revision="532a320915bb87d9fef53fc2262d5d8d9926940f" upstream="master"/>
+  <project name="platform/frameworks.git" path="frameworks" revision="b0b643a230b1e75dfe22b1597a3980a01dad41bb" upstream="master"/>
+  <project name="platform/hardware.git" path="hardware" revision="b65e2319754223f8b0ce3a1bafaa46a79bb0203d" upstream="master"/>
+  <project name="platform/kernel.git" path="kernel" revision="bd649e1ae1b05231e8a82e11f43e630c403b6b5d" upstream="master"/>
+  <project name="platform/libcore.git" path="libcore" revision="b5e2e3ea4bc4b809329f16d7742211e4bd8e25f4" upstream="master"/>
+  <project name="platform/libnativehelper.git" path="libnativehelper" revision="d5fc6ba6f486e702bba85a9a6b47d8289c2c3a4b" upstream="master"/>
+  <project name="platform/packages.git" path="packages" revision="d1772323a02886ce64a7d46065fdbe39df5d0acc" upstream="master"/>
+  <project name="platform/pdk.git" path="pdk" revision="8887a34bde8299e001a944c76518326e88f71774" upstream="master"/>
+  <project name="platform/platform_testing.git" path="platform_testing" revision="2ad4da8a9d483fcceff77352951cd9659a221c89" upstream="master"/>
+  <project name="platform/prebuilts.git" path="prebuilts" revision="950ea0c796f5661fcd222e462ba368487f4c2267" upstream="master"/>
+  <project name="platform/sdk.git" path="sdk" revision="e2414e94fb36f590e001f82609030d03bfafba4f" upstream="master"/>
+  <project name="platform/source.git" path="device/hisilicon/bigfish/sdk/source" revision="ded597fb8b93a9663d5db5b3e94a941aaa7e498e" upstream="master"/>
+  <project name="platform/system.git" path="system" revision="6f32e39be802ee1d82f888b79dc0eec9c8e82b65" upstream="master"/>
+  <project name="platform/test.git" path="test" revision="38404f473849ffa5dfe613fa9866580c8ba362cc" upstream="master"/>
+  <project name="platform/toolchain.git" path="toolchain" revision="f68c2b29c6153ab48d15ad1e7f8be74d90172f78" upstream="master"/>
+  <project name="platform/tools.git" path="tools" revision="4b7a82f60ccc58cac5d1dfac90fa946a0cfd0ed2" upstream="master"/>
+  <project name="platform/vendor.git" path="vendor" revision="f611cec8916e8f68a63261dec13cb0ce6bd8d24e" upstream="master"/>
+</manifest>

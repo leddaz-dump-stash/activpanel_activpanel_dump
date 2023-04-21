@@ -1,0 +1,163 @@
+############################################
+# xbug log tool
+# Version: V1.0 2017-03-30
+############################################
+
+#Global parms
+XBUG_SCRIPT_PATH="/atv/xbugs"
+XBUG_ROOT_PATH="/data/local/xbugs"
+SCRIPT_PATH="${XBUG_SCRIPT_PATH}/script"
+LOG_PATH="${XBUG_ROOT_PATH}/log"
+
+#Log type
+ALL_FLAG=1
+ANDROID_FLAG=1
+MEDIA_FLAG=1
+TV_FLAG=1
+SDK_FLAG=1
+KERNEL_FLAG=1
+
+#Help
+Usage()
+{
+    echo -e "\nXBUG v1.00 (2017-03-30) log catcher tool.\n"
+    echo -e "usage: xbug [--help/-h] [COMMAND] [ARGS]\n"
+    echo "        all[*]      dump all logs"
+    echo "        -a/android: dump android logs"
+    echo "        -m/media:   dump media logs"
+    echo "        -t/tv:      dump tv logs"
+    echo "        -s/sdk:     dump sdk logs"
+    echo "        -k/kernel:  dump kernel logs"
+    echo -e "        --help      usage\n"
+    exit
+}
+
+#Prefix
+GetPrefix()
+{
+    prefix="android"
+    if [ ${ANDROID_FLAG} -eq 1 ]; then
+        prefix="android"
+    elif [ ${MEDIA_FLAG} -eq 1 ]; then
+        prefix="media"
+    elif [ ${TV_FLAG} -eq 1 ]; then
+        prefix="tv"
+    elif [ ${SDK_FLAG} -eq 1 ]; then
+        prefix="sdk"
+    elif [ ${KERNEL_FLAG} -eq 1 ]; then
+        prefix="kernel"
+    fi
+
+    echo ${prefix}
+}
+
+#Find scripts in SCRIPT_PATH
+FindScript()
+{
+    #Check
+    if [ ! -d $1 -o `ls $1 | busybox wc -l` -eq 0 ]; then
+        exit
+    fi
+
+    #Add to list
+    result=""
+    for I in $1/*; do
+        #Filt
+        prefix=`GetPrefix`
+        temp=`busybox basename $I`
+        mypref=${temp:0:${#prefix}}
+        if [ ${ALL_FLAG} -eq 1 -o ${prefix} = ${mypref} ]; then
+            result="${result} $I"
+        fi
+    done
+
+    #Return
+    echo ${result}
+}
+
+#Execute scripts in SCRIPT_PATH
+ExecuteScript()
+{
+    #Get list
+    result=`FindScript ${SCRIPT_PATH}`
+    if [[ -z ${result} ]]; then
+        echo "Error, no script found, exit."
+        exit;
+    fi
+
+    #Execute
+    for I in ${result}; do
+        $I $@
+    done
+}
+
+#Parse arguments
+if [ $# -gt 0 ]; then
+    ALL_FLAG=0
+    ANDROID_FLAG=0
+    MEDIA_FLAG=0
+    TV_FLAG=0
+    SDK_FLAG=0
+    KERNEL_FLAG=0
+    case $1 in
+        -a|android)
+            ANDROID_FLAG=1
+            ;;
+        -m|media)
+            MEDIA_FLAG=1
+            ;;
+        -t|tv)
+            TV_FLAG=1
+            ;;
+        -s|sdk)
+            SDK_FLAG=1
+            ;;
+        -k|kernel)
+            KERNEL_FLAG=1
+            ;;
+        -h|--help)
+            Usage
+            ;;
+        all)
+            ALL_FLAG=1
+            ANDROID_FLAG=1
+            MEDIA_FLAG=1
+            TV_FLAG=1
+            SDK_FLAG=1
+            KERNEL_FLAG=1
+            ;;
+        *)
+            echo "Error: invalid args $1, exit"
+            exit
+            ;;
+    esac
+fi
+
+# prepare
+usb_mounted=$(cat /proc/mounts | busybox egrep "sd[a|b|c]" | busybox head -n 1)
+if [ ! -z "$USB_MOUNTED" ]; then
+    arry=(${usb_mounted})
+    mount_path=${arry[1]}
+    LOG_PATH=${mount_path}/xbug_log
+fi
+mkdir -p ${LOG_PATH}/
+start_time=$(date +%s)
+chmod 777 ${SCRIPT_PATH}/* -R
+
+# start here
+ExecuteScript ${LOG_PATH} $@
+
+# pack logs
+log_name=`date +%Y%m%d%H%M%S`
+cd ${XBUG_ROOT_PATH}/
+busybox tar zcf ${log_name}.tgz log/
+
+# result
+if [ $? -eq 0 ]; then
+    echo "Save log : ${XBUG_ROOT_PATH}/${log_name}.tgz"
+fi
+
+# print time
+end_time=$(date +%s)
+time_spend=$(busybox expr ${end_time} - ${start_time})
+echo "Finished. (time: ${time_spend}s)"

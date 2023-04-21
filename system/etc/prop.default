@@ -1,0 +1,15 @@
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+ro.secure=1
+security.perf_harden=1
+ro.adb.secure=1
+ro.allow.mock.location=0
+ro.debuggable=1
+#
+# BOOTIMAGE_BUILD_PROPERTIES
+#
+ro.bootimage.build.date=Thu Mar 2 12:51:45 UTC 2023
+ro.bootimage.build.date.utc=1677761505
+ro.bootimage.build.fingerprint=HiDPT/Hi3751V811_DMO/Hi3751V811:8.0.0/OPR6.170623.013/5.5.0.56:user/release-keys
+persist.sys.usb.config=adb
